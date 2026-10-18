@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Monta la raíz del proyecto en el contenedor
+      - ..:/workspace:cached
+      # Montaje explícito tipo bind para la carpeta local Data
+      - ../Data:/workspace/Data:cached
+
+    # Mantiene el contenedor corriendo en segundo plano
+    command: sleep infinity
+
+    # Permite depuración e interacción con la terminal integrada
+    stdin_open: true
+    tty: true

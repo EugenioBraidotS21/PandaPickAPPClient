@@ -1,0 +1,23 @@
+{
+  "name": "Java TP - SQLite (panditaClient.db)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "qwtel.sqlite-viewer"
+      ],
+      "settings": {
+        "java.project.referencedLibraries": [
+          "lib/**/*.jar"
+        ]
+      }
+    }
+  },
+
+  // Inicializa Data/panditaClient.db y descarga sqlite-jdbc.jar
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
