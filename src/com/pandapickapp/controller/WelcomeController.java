@@ -8,12 +8,13 @@ import javafx.stage.Stage;
 public class WelcomeController {
     private WelcomeModel model;
     private WelcomeView view;
+    @SuppressWarnings("unused")
     private Stage stage;
 
     public WelcomeController(WelcomeModel model, WelcomeView view, Stage stage) {
         this.model = model;
         this.view = view;
-        this.stage = stage;
+        this.stage= stage;
         inicializar();
     }
 

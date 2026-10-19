@@ -1,3 +1,5 @@
+package com.pandapickapp;
+
 import com.pandapickapp.controller.WelcomeController;
 import com.pandapickapp.model.WelcomeModel;
 import com.pandapickapp.view.WelcomeView;
@@ -23,7 +25,7 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  
         launch(args);
     }
 }
